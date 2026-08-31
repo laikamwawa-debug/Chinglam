@@ -10,7 +10,7 @@ const courses = [
 const reasons = [["專業團隊", "教練具 SEN 訓練經驗，備悉因應個別需要調整教學"], ["SEN 友善環境", "小班教學、結構化流程、感官友善設施"], ["循證為本", "課程參考運動科學研究，以成效為導向"], ["家校合作", "與家長緊密溝通，一起見證孩子的進步"]];
 const faqs = [["訓練會否作 SEN 或 ADHD 診斷？", "不會。菁林提供運動訓練與觀察回饋；如需臨床評估，請向合資格專業人士查詢。"], ["孩子未做過運動，適合參加嗎？", "可以。初次速評會了解孩子的興趣、舒適度和基本動作，再建議合適的起步安排。"], ["家長可以了解孩子的進度嗎？", "可以。我們會按訓練目標提供清晰進度回饋，與家長一起調整練習方向。"]];
 
-function Logo(){return <a className="logo" href="#top"><span className="logo-mark"><i/><b/><em/></span><span className="logo-copy"><strong>菁林體育會</strong><small>SEN Sports Training</small><label>專為SEN兒童及青少年而設的運動訓練</label></span></a>}
+function Logo(){return <a className="logo" href="#top"><span className="logo-image"><img src="/chinglam-logo.jpg" alt="菁林體育會 ChingLam Sport Club" /></span><span className="logo-copy"><strong>菁林體育會</strong><small>SEN Sports Training</small><label>專為SEN兒童及青少年而設的運動訓練</label></span></a>}
 
 export default function Home(){const [openFaq,setOpenFaq]=useState<number|null>(0);return <main id="top">
   <header className="site-header"><Logo/><nav className="desktop-nav"><a href="#courses">課程</a><a href="#process">訓練流程</a><a href="#team">專業團隊</a><a href="#contact">聯絡我們</a></nav><button className="menu-button" aria-label="開啟選單">☰</button></header>
