@@ -16,6 +16,12 @@ npm run dev
 3. Railway 會讀取 `railway.json`，自動執行 `npm run build`，並以 `npm run start` 啟動網站。
 4. 不需要手動設定固定 Port；Railway 的 `PORT` 會由 vinext 自動讀取。
 
+## 報名及後台
+
+- 公開報名表位於首頁「立即報名」區塊，提交後會寫入 D1 `registrations` 資料表。
+- 管理後台：`/admin`。在 Sites 內以管理員帳戶登入即可查看；如部署到其他平台，請設定 `ADMIN_ACCESS_KEY`，再於後台輸入存取碼。
+- 後台可搜尋報名、按狀態篩選，並更新為「新報名、已聯絡、已安排速評、已入班、已完成」。
+
 ## 品牌資料
 
 聯絡電話、WhatsApp 號碼及地址目前沿用模版示例，正式上線前請在 `app/page.tsx` 的聯絡區塊替換。
