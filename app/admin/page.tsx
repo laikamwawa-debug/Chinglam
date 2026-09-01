@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 
 type Registration = {
   id: number;
@@ -71,8 +72,9 @@ export default function AdminPage() {
   }
 
   useEffect(() => {
-    void loadRegistrations();
+    const timer = window.setTimeout(() => void loadRegistrations(), 0);
     // The dashboard intentionally loads once; refresh is available beside the title.
+    return () => window.clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -108,11 +110,11 @@ export default function AdminPage() {
   return (
     <main className="admin-shell">
       <header className="admin-header">
-        <a className="admin-brand" href="/">
+        <Link className="admin-brand" href="/">
           <img src="/chinglam-logo.jpg" alt="菁林體育會" />
           <span><strong>菁林體育會</strong><small>報名管理後台</small></span>
-        </a>
-        <a className="admin-back" href="/">← 返回網站</a>
+        </Link>
+        <Link className="admin-back" href="/">← 返回網站</Link>
       </header>
 
       <section className="admin-content">
